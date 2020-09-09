@@ -56,8 +56,6 @@
         <item>"bt-pan"</item>
         <item>"bt-dun"</item>   
     </string-array>
-
-    <bool name="config_wifi_background_scan_support">true</bool>
     
     <bool name="config_user_notification_of_restrictied_mobile_access">false</bool>
  
@@ -115,4 +113,7 @@
          on screen size and total memory for the largest lowmemorykiller bucket, and scaled
          proportionally to the smaller buckets. -1 keeps the default. -->
     <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">122880</integer>
+
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">true</bool>
 </resources>

@@ -47,7 +47,6 @@ COMMON_GLOBAL_CFLAGS += -DMTK_G_MT6589 -DMTK_HARDWARE -DADD_LEGACY_ACQUIRE_BUFFE
 BOARD_HAS_MTK_HARDWARE := true
 MTK_HARDWARE := true
 #BOARD_HAVE_PIXEL_FORMAT_INFO :=true
-BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 #MTK DEFINITIONS
 HAVE_XLOG_FEATURE := yes
@@ -132,7 +131,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/root/fstab.mt6589
+TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/rootdir/fstab.mt6589
 TARGET_PREBUILT_RECOVERY_KERNEL := $(DEVICE_FOLDER)/recovery/kernel
 BOARD_HAS_NO_SELECT_BUTTON := true
 
@@ -163,18 +162,18 @@ TARGET_SPECIFIC_HEADER_PATH := device/asus/me173x/include
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
 
 #SEPolicy
-BOARD_SEPOLICY_DIRS += \
-    device/asus/me173x/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    device/asus/me173x/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    file_contexts \
-    device.te \
-    netd.te \
-    app.te \
-    bootanimation.te \
-    pvrsrvctl.te \
-    surfaceflinger.te \
-    system.te
+#BOARD_SEPOLICY_UNION += \
+#    file_contexts \
+#    device.te \
+#    netd.te \
+#    app.te \
+#    bootanimation.te \
+#    pvrsrvctl.te \
+#    surfaceflinger.te \
+#    system.te
 
 DEVICE_RESOLUTION := 800x1280
 
@@ -192,5 +191,5 @@ TW_INTERNAL_STORAGE_PATH := "/sdcard"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_EXTERNAL_STORAGE_PATH := "/external_sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sdcard"
-TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/root/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/rootdir/recovery.fstab
 
